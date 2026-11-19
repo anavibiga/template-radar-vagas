@@ -1,0 +1,167 @@
+%-------------------------
+% Template base do CV (compila no Overleaf, com tectonic ou pdflatex).
+% Os CVs adaptados copiam este arquivo para cv/gerados/<id>/cv.tex e trocam o conteúdo das seções.
+% Contatos: só os marcados em perfil/config.md, com os dados de perfil/contatos.md; os outros ficam comentados.
+% Para usar o seu próprio modelo, substitua este arquivo (o /gerar-cv segue o que estiver aqui).
+% Vaga em inglês: traduzir títulos de seção e conteúdo.
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADER-----------------
+\begin{tabularx}{\linewidth}{L r}
+\textbf{\Large NOME COMPLETO} & \\
+% \href{mailto:EMAIL}{\faEnvelope\ EMAIL} & \\
+% \faPhone\ TELEFONE & \\
+% \faMapMarker*\ CIDADE & \\
+% \href{https://github.com/USUARIO}{\faGithub\ github.com/USUARIO} & \\
+% \href{https://www.linkedin.com/in/USUARIO/}{\faLinkedin\ linkedin.com/in/USUARIO} & \\
+% \href{https://PORTFOLIO}{\faGlobe\ PORTFOLIO} &
+\end{tabularx}
+
+%-----------RESUMO-----------
+\section{\textbf{Resumo}}
+\small{
+%% 3–4 linhas alinhadas à vaga, com o vocabulário dela.
+}
+
+%-----------HABILIDADES-----------
+\section{\textbf{Habilidades Técnicas}}
+\small{
+%% Agrupar por categoria conforme a área (ex.: Linguagens, Frameworks, Testes, Cloud & DevOps, Dados).
+\textbf{Categoria:} \\
+\textbf{Idiomas:}
+}
+
+%-----------EXPERIÊNCIA PROFISSIONAL-----------
+\section{\textbf{Experiência Profissional}}
+\resumeSubHeadingListStart
+\resumeSubheading
+{ Empresa}{Local}
+{Cargo}{Início -- Fim}
+\resumeItemListStart
+\item{\textbf{Projeto:} verbo de ação + o que foi feito + \textbf{resultado}.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJETOS (opcional)-----------
+\section{\textbf{Projetos}}
+\resumeSubHeadingListStart
+\resumeSubheading
+{ Nome do projeto}{\href{https://LINK}{link}}
+{Stack}{Ano}
+\resumeItemListStart
+\item{O que é e o resultado (usuários, estrelas, performance).}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------FORMAÇÃO ACADÊMICA-----------
+\section{\textbf{Formação Acadêmica}}
+\resumeSubHeadingListStart
+\resumeSubheading
+{ Instituição}{ }
+{Curso}{Ano}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICAÇÕES & CURSOS-----------
+\section{\textbf{Certificações \& Cursos}}
+\resumeSubHeadingListStart
+\resumeSubheading
+{ Instituição}{ }
+{Curso \textnormal{(carga horária)}}{Ano}
+\resumeSubHeadingListEnd
+\end{document}

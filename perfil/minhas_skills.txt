@@ -1,0 +1,2 @@
+# Skills que tenho (uso no dia a dia ou já usei em produção), uma por linha, em nomes canônicos.
+# Preenchido pelo /montar-perfil. Ver ALIASES em scripts/stack.py.

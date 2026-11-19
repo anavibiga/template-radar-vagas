@@ -1,0 +1,19 @@
+# Dados pessoais (LGPD): ficam só na sua máquina
+perfil/config.md
+perfil/contatos.md
+perfil/originais/
+*.pdf
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Python
+__pycache__/
+.venv/
+
+.DS_Store
